@@ -10,12 +10,11 @@ MyricomSource::~MyricomSource()
 	Close();
 	}
 
-MyricomSource::MyricomSource(const std::string& path, bool is_live, const std::string& arg_kind)
+MyricomSource::MyricomSource(const std::string& path, bool is_live)
 	{
 	if ( ! is_live )
 		Error("Myricom source does not support offline input");
 
-	kind = arg_kind;
 	current_filter = -1;
 
 	int colon = path.find(":");
