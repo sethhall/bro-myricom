@@ -1,3 +1,9 @@
-Bro::Myricom - Packet acquisition via Myricom (dynamic, version 1.0)
+Bro::Myricom - Packet acquisition via Myricom SNF v3+v4 (dynamic, version 1.0)
     [Packet Source] MyricomReader (interface prefix "myricom"; supports live input)
+    [Constant] Myricom::snf_ring_size
+    [Constant] Myricom::snf_num_rings
+    [Constant] Myricom::snf_app_id
+    [Constant] Myricom::snf_aggregate
+    [Constant] Myricom::snf_rss_mode
+    [Type] Myricom::RssField
 

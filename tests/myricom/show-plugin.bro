@@ -1,2 +1,2 @@
-# @TEST-EXEC: bro -NN Bro::myricom >output
+# @TEST-EXEC: bro -NN Bro::Myricom >output
 # @TEST-EXEC: btest-diff output

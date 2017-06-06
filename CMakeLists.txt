@@ -1,9 +1,7 @@
 cmake_minimum_required(VERSION 2.6.3)
 
 project(BroPluginMyricom)
-
 include(BroPlugin)
-
 find_package(Myricom)
 
 if ( MYRICOM_FOUND )
@@ -16,13 +14,12 @@ if ( MYRICOM_FOUND )
     bro_plugin_dist_files(README CHANGES COPYING VERSION broctl/myricom.py)
     bro_plugin_end()
 
-    file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/VERSION" VERSION LIMIT_COUNT 1)
-    
-    if ("${PROJECT_SOURCE_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}")
-        # Allows building rpm/deb packages via "make package" in build dir.
-        include(ConfigurePackaging)
-        ConfigurePackaging(${VERSION})
-    endif ()
+    #file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/VERSION" VERSION LIMIT_COUNT 1)
+    #if ("${PROJECT_SOURCE_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}")
+    #    # Allows building rpm/deb packages via "make package" in build dir.
+    #    include(ConfigurePackaging)
+    #    ConfigurePackaging(${VERSION})
+    #endif ()
 
     message(STATUS "Myricom prefix      : ${MYRICOM_ROOT_DIR}")
 else ()
