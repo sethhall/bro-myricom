@@ -1,3 +1,7 @@
 [package]
-#script_dir = scripts
-build_command = ./configure --bro-dist=%(bro_dist)s && make
+description = Packet source plugin that provides native Myricom SNF v3+v4 support.
+tags = packet source, plugin, myricom
+plugin_dir = build
+script_dir = scripts
+build_command = ( ./configure --bro-dist=%(bro_dist)s && make )
+test_command = ( cd tests && btest -d )
