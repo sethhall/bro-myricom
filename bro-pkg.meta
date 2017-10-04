@@ -1,6 +1,8 @@
 [package]
 description = Packet source plugin that provides native Myricom SNF v3+v4 support.
 tags = packet source, plugin, myricom
+depends =
+	bro-pkg >=1.2
 plugin_dir = build/Bro_Myricom.tgz
 # This is here only because I screwed up 1.0
 script_dir = scripts.not_used
