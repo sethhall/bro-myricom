@@ -1,7 +1,7 @@
-import BroControl.plugin
-import BroControl.config
+import ZeekControl.plugin
+import ZeekControl.config
 
-class Myricom(BroControl.plugin.Plugin):
+class Myricom(ZeekControl.plugin.Plugin):
     def __init__(self):
         super(Myricom, self).__init__(apiversion=1)
 
@@ -41,7 +41,7 @@ class Myricom(BroControl.plugin.Plugin):
     def options(self):
         return [("snf_ring_size", "int", 1024, "Size of host memory buffer")]
 
-    def broctl_config(self):
+    def zeekctl_config(self):
         script = "# This is the global setting, but can be overridden with per-node configuration"
         script += "\nredef Myricom::snf_ring_size = %d;" % self.getOption("snf_ring_size")
 

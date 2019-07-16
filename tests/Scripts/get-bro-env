@@ -8,7 +8,7 @@ bro=`cat ${base}/../../build/CMakeCache.txt | grep BRO_DIST | cut -d = -f 2`
 if [ "$1" = "brobase" ]; then
     echo ${bro}
 elif [ "$1" = "bropath" ]; then
-    ${bro}/build/bro-path-dev
+    ${bro}/build/zeek-path-dev
 elif [ "$1" = "bro_plugin_path" ]; then
     ( cd ${base}/../../build && pwd )
 elif [ "$1" = "bro_seed_file" ]; then

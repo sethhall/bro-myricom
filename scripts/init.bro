@@ -22,15 +22,6 @@ export {
 	## "myricom::*" would open and aggregate all Myricom interfaces.
 	const snf_aggregate = F &redef;
 
-	## Fields available to hash for packet load balancing.
-	type RssField: enum {
-		SNF_RSS_IP        =  0x01, #<< Include IP (v4 or v6) SRC/DST addr in hash
-		SNF_RSS_SRC_PORT  =  0x10, #<< Include TCP/UDP/SCTP SRC port in hash
-		SNF_RSS_DST_PORT  =  0x20, #<< Include TCP/UDP/SCTP DST port in hash 
-		SNF_RSS_GTP       =  0x40, #<< Include GTP TEID in hash
-		SNF_RSS_GRE       =  0x80, #<< Include GRE contents in hash
-	};
-
 	## Fields to use in creating the SNF RSS hash for balancing packets
 	## out to different Bro processes.
 	const snf_rss_mode: set[RssField] = {
