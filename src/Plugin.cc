@@ -13,7 +13,7 @@ plugin::Configuration Plugin::Configure()
     config.name = "Bro::Myricom";
     config.description = "Packet acquisition via Myricom SNF v3+v4";
     config.version.major = 1;
-    config.version.minor = 0;
+    config.version.minor = 1;
 
     return config;
 }
