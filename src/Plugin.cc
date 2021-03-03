@@ -1,5 +1,6 @@
 #include "Plugin.h"
 #include "Myricom.h"
+#include "zeek/iosource/Component.h"
 
 namespace plugin { namespace Bro_Myricom { Plugin plugin; } }
 
